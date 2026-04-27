@@ -11,7 +11,7 @@ The objective of this Capstone projects is to design a 3-stage ladder LC filter 
 
 The aim  of this work is start from a dataset of an analytically derived sub-optimal solutions, use that to train a ML/AI regressor, and then use regressor to predict what would be the solution to a real world multiple stopband problems.
 
-![image-20260425122935438](Images/image-20260425122935438.png)
+!(Images/image-20260425122935438.png)
 
 *Fig1: Desired piecewise continuous frequency response of a filter along with LC filter response. Goal: minimze the difference between the two*
 
