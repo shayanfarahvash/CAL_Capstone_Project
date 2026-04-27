@@ -2,7 +2,6 @@
 
 Shayan Farahvash
 
-#### Executive summary
 
 The objective of this Capstone projects is to design a 3-stage ladder LC filter to deliver a desired frequency response subject to the following conditions 
 
