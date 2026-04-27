@@ -1,4 +1,4 @@
-### Optimal Design of a 3-stage Ladder LC Bandpass Filter with an Arbitry Frequency Response 
+### Optimal Design of a 3-stage Ladder LC Bandpass Filter with an Arbitrary Frequency Response 
 
 Shayan Farahvash
 
