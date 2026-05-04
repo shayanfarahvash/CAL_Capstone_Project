@@ -63,3 +63,25 @@ Figure 2: Topology of filter used for this project. Three components are added t
 Figure 3: Dataframe structure for training
 
 
+Each row in the dataframe presents the filter’s frequency response (X) alongside the corresponding LC component values (y), as illustrated in Figure 3. Sample frequency responses appear in Figure 4, with the base filter highlighted in bold black.
+
+
+A significant challenge in this synthesis task arises from the fact that the component values span nine orders of magnitude (refer to Figure 5). Training a neural network on such raw data leads to poor convergence and elevated Mean Absolute Percentage Error (MAPE). To address this, all component values are normalized using log10 scaling, which compresses the value range and allows the optimizer to weigh relative changes uniformly across the pF–µH spectrum.
+
+
+<p align="center">
+  <img src="/Images/Image4.png" width="600" title="Project Graph">
+</p>
+
+
+Figure 4: Samples of frequency response of filter in the training set
+
+
+<p align="center">
+  <img src="/Images/Image5.png" width="600" title="Project Graph">
+</p>
+
+<img width="468" height="135" alt="image" src="https://github.com/user-attachments/assets/d402fc94-aa42-4e9a-bf81-9c378cd8671c" />
+
+
+Figure 5: Statistics of filter components
