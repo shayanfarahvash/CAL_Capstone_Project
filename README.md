@@ -53,14 +53,14 @@ Five base filters were evaluated, with frequency response samples collected at 1
   <img src="/Images/Image2.png" width="600" title="Project Graph">
 </p>
 
-Figure 2: Topology of filter used for this project. Three components are added to expand the flexibility of design. the blue-marked components of topology are derived from analytical techniques as the starting point for randomization and simulation.
+<p align="center">Figure 2: Topology of filter used for this project. Three components are added to expand the flexibility of design. the blue-marked components of topology are derived from analytical techniques as the starting point for randomization and simulation.</p>
 
 
 <p align="center">
   <img src="/Images/Image3.png" width="600" title="Project Graph">
 </p>
 
-Figure 3: Dataframe structure for training
+<p align="center">Figure 3: Dataframe structure for training</p>
 
 
 Each row in the dataframe presents the filter’s frequency response (X) alongside the corresponding LC component values (y), as illustrated in Figure 3. Sample frequency responses appear in Figure 4, with the base filter highlighted in bold black.
@@ -82,4 +82,4 @@ A significant challenge in this synthesis task arises from the fact that the com
 
 <p align="center">Figure 5: Statistics of filter components</p>
 
-<p align="center">This text is centered.</p>
+
