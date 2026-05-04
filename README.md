@@ -21,7 +21,7 @@ The aim  of this work is start from a dataset of an analytically derived sub-opt
 Figure 1: Desired piecewise continuous frequency response of a filter along with LC filter response. Goal: minimize the difference between the two
 
   
-<font color="blue">***Rationale***
+<font color="blue">***Rationale***</span>
 
 
 Filters play a key role in wireless and wireline devices by passing a desired signal to subsequent systems while simultaneously—and most crucially—rejecting all unwanted ones. These unwanted signals (often referred to as blockers or interferers) cause a range of negative system impacts, such as desensitization, aliasing, intermodulation, and compression. The strength and frequency of such signals can vary widely, requiring a filter with a flexible rejection profile that changes as a function of frequency.
