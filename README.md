@@ -21,6 +21,8 @@ The aim  of this work is start from a dataset of an analytically derived sub-opt
 Figure 1: Desired piecewise continuous frequency response of a filter along with LC filter response. Goal: minimize the difference between the two
 
 <br>
+
+
 <font color="blue">***Rationale***</span>
 
 
