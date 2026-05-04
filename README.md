@@ -73,13 +73,13 @@ A significant challenge in this synthesis task arises from the fact that the com
   <img src="/Images/Image4.png" width="600" title="Project Graph">
 </p>
 
-Figure 4: Samples of frequency response of filter in the training set
+<p align="center">Figure 4: Samples of frequency response of filter in the training set</p>
 
 
 <p align="center">
   <img src="/Images/Image5.png" width="600" title="Project Graph">
 </p>
 
-Figure 5: Statistics of filter components
+<p align="center">Figure 5: Statistics of filter components</p>
 
 <p align="center">This text is centered.</p>
