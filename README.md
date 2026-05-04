@@ -81,3 +81,5 @@ Figure 4: Samples of frequency response of filter in the training set
 </p>
 
 Figure 5: Statistics of filter components
+
+<p align="center">This text is centered.</p>
