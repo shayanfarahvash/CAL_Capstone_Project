@@ -83,3 +83,4 @@ A significant challenge in this synthesis task arises from the fact that the com
 <p align="center">Figure 5: Statistics of filter components</p>
 
 
+To assess data quality, box plots of filter components were presented in Fig6. Most components showed tight distributions, except for Cs_2 and Cs_1, which had noticeably large outliers. Outliers were detected and removed using the Interquartile Range (IQR) method—a robust approach commonly used for isolating extreme values. The process was applied to the Log10-scaled target variables (df_y), as log-scaling normalizes the wide dynamic range of component values and improves outlier detection. Values outside the interval [Q1 - 1.5 * IQR, Q3 + 1.5 * IQR]—often referred to as the "whiskers" of a box plot—were considered outliers. These outlier rows were then removed from the original, unscaled dataframe (df) to generate a new, cleaned dataset named df_cleaned.
