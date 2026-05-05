@@ -117,3 +117,14 @@ By analyzing the histogram of filter components (Fig. 7), additional insights ca
 </p>
 
 <p align="center">Figure 8: Histogram of filter responses at four frequencies</p>
+
+
+To determine the distribution of filter response data, five key points were selected for analysis: 1800 MHz, 2300 MHz, 2400 MHz, and 2800 MHz. The response distributions are consistent and well-formed (see Fig. 8).
+
+•	The notch frequency should not be positioned too close to the upper band edge at 2400 MHz; the bar diagram indicates that the minimum value is 2450 MHz.
+
+•	As anticipated, filter loss at the passband edges (2300 MHz and 2400 MHz) is minimal. However, loss at the upper band edge is strongly correlated with the notch frequency; a lower notch frequency leads to increased loss.
+
+***Methodology***
+
+A multi-layer perceptron (MLP) is employed to map the filter's frequency response to its respective components. This decision is primarily based on the observation that existing literature regarding machine learning and artificial intelligence in circuit design tends to favor reinforcement learning (RL) for identifying the optimal circuit configuration. In this study, RL is applied following an initial estimate obtained through supervised learning regression. The advantage of utilizing an MLP lies in its structure as a neural network, which allows it to be incorporated into the RL framework as the initial value of the actor network.
