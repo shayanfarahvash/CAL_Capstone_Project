@@ -208,7 +208,7 @@ Even on individual test cases like Sample #159, the parity remains clear. The ML
 
 <p align="center">Figure 15: CComparison table between MLP and SVR</p>
 
-***Next Steps***
+***Next steps***
 
 In deep learning workflows, supervised learning (SL) is often the first line of defense for regression problems, providing a "hot start" by mapping inputs to preliminary solutions. In the context of LC filter synthesis, architectures like MLP and SVM are used for this project. 
 
