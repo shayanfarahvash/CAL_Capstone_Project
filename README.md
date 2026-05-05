@@ -105,3 +105,15 @@ By analyzing the histogram of filter components (Fig. 7), additional insights ca
 
 
 
+<p align="center">
+  <img src="/Images/Image7.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 7: Histogram of values for filter components</p>
+
+
+<p align="center">
+  <img src="/Images/Image8.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 8: Histogram of filter responses at four frequencies</p>
