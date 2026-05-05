@@ -156,3 +156,17 @@ For hyperparameter optimization, GridSearchCV from scikit-learn can be employed;
 
 
 The optimization history graph illustrates how the model’s error decreases over a series of trials, helping to identify which hyperparameters had the most impact. For complex tasks like filter synthesis, network capacity (such as neurons per layer and hidden layers) and learning rate often play the biggest roles in performance. The parallel coordinate plot offers even greater insight: each vertical line stands for a different hyperparameter (like learning rate or batch size), with the final line displaying the Objective Value. Every zigzagging path across the plot represents a single trial—a unique combination of hyperparameters—with lines color-coded by their objective value. Since the goal is to minimize MSE, pay attention to the dark blue lines (or the color that matches the lowest value on the color bar).
+
+
+<p align="center">
+  <img src="/Images/Image11.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 11: Importance of hyperparameters in reducing  MSE</p>
+
+
+<p align="center">
+  <img src="/Images/Image12.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 12: History of search for hyperparameter tuning</p>
