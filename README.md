@@ -144,3 +144,15 @@ The MLP is implemented within the TunableMLP class in PyTorch. Rather than emplo
 
 The training cell operated efficiently, completing 100 epochs within approximately 41 seconds. The model converged effectively, with training MSE (Mean Squared Error) decreasing from around 28.5 to 0.19. Validation/test MSE exhibited similar performance, settling at approximately 0.198. The learning rate systematically declined from 0.0055 to 0.000345 during later epochs, illustrating the effectiveness of the ReduceLROnPlateau scheduler in taking progressively smaller steps near optimal weights to prevent overshooting. No significant overfitting was observed: The close alignment between final training loss and test loss indicates that the model achieved strong generalization rather than simply memorizing the training data.
 
+
+<p align="center">
+  <img src="/Images/Image10.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 10: Training of MLP</p>
+
+
+For hyperparameter optimization, GridSearchCV from scikit-learn can be employed; however, several key considerations should be noted. GridSearchCV requires an estimator compatible with scikit-learn. Since an MLP model is a custom PyTorch neural network (nn.Module), it cannot be directly integrated into GridSearchCV. To enable compatibility, a wrapper library such as skorch is necessary, as it allows PyTorch models to function in a manner consistent with scikit-learn estimators. GridSearchCV conducts an exhaustive search, evaluating all defined parameter combinations. This approach can become extremely time-consuming and computationally intensive when applied to deep learning models with extensive search spaces involving parameters such as the number of hidden layers, neurons, batch sizes, and continuous variables like learning rates. In contrast, Optuna utilizes Bayesian Optimization, which leverages information from previous trials to predict promising hyperparameter values. This results in a more efficient and faster tuning process for neural networks compared to the brute-force methodology of grid search.
+
+
+The optimization history graph illustrates how the model’s error decreases over a series of trials, helping to identify which hyperparameters had the most impact. For complex tasks like filter synthesis, network capacity (such as neurons per layer and hidden layers) and learning rate often play the biggest roles in performance. The parallel coordinate plot offers even greater insight: each vertical line stands for a different hyperparameter (like learning rate or batch size), with the final line displaying the Objective Value. Every zigzagging path across the plot represents a single trial—a unique combination of hyperparameters—with lines color-coded by their objective value. Since the goal is to minimize MSE, pay attention to the dark blue lines (or the color that matches the lowest value on the color bar).
