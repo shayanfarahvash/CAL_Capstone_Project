@@ -179,7 +179,7 @@ Although MSE is useful for optimization, it lacks clear real-world meaning. To a
 
 
 <p align="center">
-  <img src="/Images/Image12.png" width="600" title="Project Graph">
+  <img src="/Images/Image13.png" width="600" title="Project Graph">
 </p>
 
 <p align="center">Figure 13: MLP accuracy on predicting components values of filter</p>
