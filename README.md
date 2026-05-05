@@ -128,3 +128,19 @@ To determine the distribution of filter response data, five key points were sele
 ***Methodology***
 
 A multi-layer perceptron (MLP) is employed to map the filter's frequency response to its respective components. This decision is primarily based on the observation that existing literature regarding machine learning and artificial intelligence in circuit design tends to favor reinforcement learning (RL) for identifying the optimal circuit configuration. In this study, RL is applied following an initial estimate obtained through supervised learning regression. The advantage of utilizing an MLP lies in its structure as a neural network, which allows it to be incorporated into the RL framework as the initial value of the actor network.
+
+<p align="center">
+  <img src="/Images/Image9.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 9: MLP</p>
+
+
+StandardScaler is used to normalize input features (frequencies), setting their mean to 0 and variance to 1 so that the neural network treats all frequency points equally during training. For output targets—capacitors (pF) and inductors (µH), which have very different scales—a log transform (np.log10) compresses their range. Next, a custom MixedScaler applies QuantileTransformer to components like Cs_0 and CS_1 with extreme outliers, while others receive standard scaling. After scaling, inputs from the critical passband (2300–2400 MHz) are multiplied by 100, ensuring the model focuses more closely and penalizes errors more heavily in this important region.
+
+
+The MLP is implemented within the TunableMLP class in PyTorch. Rather than employing a fixed architecture, this class offers substantial flexibility by accepting parameters for input_dim, output_dim, hidden_layers, and neurons_per_layer. The network is constructed dynamically using an nn.Sequential container: it begins with an input layer, iteratively adds the specified number of hidden layers, and concludes with an output layer. Each hidden layer utilizes the ReLU (Rectified Linear Unit) activation function to introduce non-linearity. For regression tasks, the MLP applies Mean Squared Error (nn.MSELoss()), which is commonly used to minimize the squared discrepancies between predicted and actual values. The Adam optimizer is employed to adapt learning rates for each parameter, thereby enhancing the effectiveness of deep learning processes. Additionally, the MLP integrates the ReduceLROnPlateau scheduler, which monitors validation or test loss and automatically reduces the learning rate by half (factor=0.5) if no improvement is observed over ten epochs (patience=10). This feature facilitates more precise weight adjustment as the model approaches optimality, reducing the risk of overshooting.
+
+
+The training cell operated efficiently, completing 100 epochs within approximately 41 seconds. The model converged effectively, with training MSE (Mean Squared Error) decreasing from around 28.5 to 0.19. Validation/test MSE exhibited similar performance, settling at approximately 0.198. The learning rate systematically declined from 0.0055 to 0.000345 during later epochs, illustrating the effectiveness of the ReduceLROnPlateau scheduler in taking progressively smaller steps near optimal weights to prevent overshooting. No significant overfitting was observed: The close alignment between final training loss and test loss indicates that the model achieved strong generalization rather than simply memorizing the training data.
+
