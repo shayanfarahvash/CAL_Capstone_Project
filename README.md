@@ -216,8 +216,10 @@ However, while these models successfully learn the underlying physics and provid
 
 To bridge this gap, Reinforcement Learning (RL)—specifically algorithms like Proximal Policy Optimization (PPO) via Stable Baselines3—has emerged as a powerful tool for navigating these massive solution spaces. Much like RL agents learn to master the branching paths of Go or the complex controls of autonomous vehicles, they can be trained to "play" the design space of an electrical network.
 By combining these paradigms, we could establish a two-stage optimization pipeline:
-§	The Supervised Estimate: The MLP/SVR provides a near-optimal starting point in a fraction of a second, drastically reducing the computational overhead that an iterative search would normally face from a "cold start."
-§	The RL Refinement: The RL agent (or a targeted routine like Nelder-Mead) then takes this estimate and performs a granular search of the immediate local space. It fine-tunes the component values to minimize the response MSE, turning a "degraded" prediction into a continuous, realizable frequency response.
+
+•	The Supervised Estimate: The MLP/SVR provides a near-optimal starting point in a fraction of a second, drastically reducing the computational overhead that an iterative search would normally face from a "cold start."
+
+•	The RL Refinement: The RL agent (or a targeted routine like Nelder-Mead) then takes this estimate and performs a granular search of the immediate local space. It fine-tunes the component values to minimize the response MSE, turning a "degraded" prediction into a continuous, realizable frequency response.
 
 This synergy allows for a design tool that is both fast and precise, replacing manual, ad-hoc tuning with an automated system that understands the deep, non-linear mapping of RF components.
 
