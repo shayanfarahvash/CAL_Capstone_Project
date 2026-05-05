@@ -170,3 +170,22 @@ The optimization history graph illustrates how the model’s error decreases ove
 </p>
 
 <p align="center">Figure 12: History of search for hyperparameter tuning</p>
+
+
+***Results***
+
+
+Although MSE is useful for optimization, it lacks clear real-world meaning. To address this, the evaluation cell converts the scaled predictions back into physical units (micro-Henries and pico-Farads) and computes the Mean Absolute Percentage Error (MAPE). The average MAPE is 8.57% on training data and 8.93% on unseen test data, demonstrating a narrow margin and strong generalization. The breakdown table offers vital engineering insight: the model predicts inductors (L_0, L_1, L_2) and particular capacitors (such as Cs_1 and the Cp group) with impressive accuracy, often achieving errors below 1%. In contrast, it faces greater challenges with capacitors Cs_0 and Cs_2, which see around 33% error. This suggests that the frequency response is either highly sensitive or highly degenerate regarding these capacitor values, making them intrinsically more difficult to predict based solely on magnitude response.
+
+
+<p align="center">
+  <img src="/Images/Image12.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 13: MLP accuracy on predicting components values of filter</p>
+
+
+The MLP demonstrated strong performance when tested on a new piecewise continuous profile. Its initial Response MSE was 260.75, and after applying Nelder-Mead optimization to adjust the circuit, the MSE improved only slightly to 254.91. This minimal difference shows that the MLP’s first prediction was already close to optimal. The component values had just an 8.54% MAPE compared to those from full optimization, indicating that the model isn't simply memorizing its training data—it has genuinely absorbed the underlying physics and intricate mapping needed for filter synthesis. When confronted with a completely new, piecewise-continuous response, the MLP provides a nearly optimal solution in mere seconds.
+
+
+
