@@ -237,5 +237,5 @@ MLP Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40e
 
 3-	As said previously the SVR notebook execution flow is identical to MLP. It is recommended that MLP to be executed first. After gaining familiarity with code execution flow, running SVR notebook would be far easier. SVR notebook can be fund here:
 SVR Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_SVR.ipynb
-<img width="468" height="398" alt="image" src="https://github.com/user-attachments/assets/7ff306cf-5468-42dc-809b-a6db898e3431" />
+
 
