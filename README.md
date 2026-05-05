@@ -188,4 +188,54 @@ Although MSE is useful for optimization, it lacks clear real-world meaning. To a
 The MLP demonstrated strong performance when tested on a new piecewise continuous profile. Its initial Response MSE was 260.75, and after applying Nelder-Mead optimization to adjust the circuit, the MSE improved only slightly to 254.91. This minimal difference shows that the MLP’s first prediction was already close to optimal. The component values had just an 8.54% MAPE compared to those from full optimization, indicating that the model isn't simply memorizing its training data—it has genuinely absorbed the underlying physics and intricate mapping needed for filter synthesis. When confronted with a completely new, piecewise-continuous response, the MLP provides a nearly optimal solution in mere seconds.
 
 
+<p align="center">
+  <img src="/Images/Image14.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 14: Comparison between MLP prediction (sample #159) and the corresponding optimal solutions</p>
+
+
+Filter design is inherently difficult for traditional linear models because the relationship between components (L ,C ) and frequency response is highly non-linear. MLP and SVR ( Support Vector Regression) are the right tools for this task because they excel at capturing these complex, high-dimensional mappings without requiring explicit physical equations for every iteration.
+The details of deployed SVR model is not discussed here but workflow is identical to MLP. The notebook supplied to support the comparison table shown below.
+
+The data confirms that both models are roughly equal in performance, offering nearly interchangeable results. While SVR shows a slight edge in training MAPE (7.69% vs. 8.57%), the MLP actually delivers a better initial frequency response out of the box, with an average MSE of 597.83 compared to SVR’s 620.06. Once these predictions are put through a targeted optimization routine, both settle to very close average MSE of 532 and 523.
+
+Even on individual test cases like Sample #159, the parity remains clear. The MLP achieved a tighter component match (8.54% MAPE vs. 9.27% for SVR), while SVR reached a marginally lower optimized error (244.53 vs. 254.91). This statistical neck-and-neck performance proves that both architectures have successfully mastered the underlying design physics, allowing you to choose the model that best fits your specific computational workflow without sacrificing accuracy.
+
+<p align="center">
+  <img src="/Images/Image15.png" width="600" title="Project Graph">
+</p>
+
+<p align="center">Figure 15: CComparison table between MLP and SVR</p>
+
+***Next Steps***
+
+In deep learning workflows, supervised learning (SL) is often the first line of defense for regression problems, providing a "hot start" by mapping inputs to preliminary solutions. In the context of LC filter synthesis, architectures like MLP and SVM are used for this project. 
+
+However, while these models successfully learn the underlying physics and provide solutions with low MAPE (around 8.5%), the search space for high-frequency electronics is exceptionally sensitive. Because the relationship between a component's physical value and its frequency response highly non-linear, even a 1% deviation in an inductor or capacitor value can cause a filter to drift out of specification. In these high-precision domains, a supervised "one-shot" prediction often acts as an educated guess—valuable, but inadequate for a realizable final product.
+
+To bridge this gap, Reinforcement Learning (RL)—specifically algorithms like Proximal Policy Optimization (PPO) via Stable Baselines3—has emerged as a powerful tool for navigating these massive solution spaces. Much like RL agents learn to master the branching paths of Go or the complex controls of autonomous vehicles, they can be trained to "play" the design space of an electrical network.
+By combining these paradigms, we could establish a two-stage optimization pipeline:
+§	The Supervised Estimate: The MLP/SVR provides a near-optimal starting point in a fraction of a second, drastically reducing the computational overhead that an iterative search would normally face from a "cold start."
+§	The RL Refinement: The RL agent (or a targeted routine like Nelder-Mead) then takes this estimate and performs a granular search of the immediate local space. It fine-tunes the component values to minimize the response MSE, turning a "degraded" prediction into a continuous, realizable frequency response.
+
+This synergy allows for a design tool that is both fast and precise, replacing manual, ad-hoc tuning with an automated system that understands the deep, non-linear mapping of RF components.
+
+
+
+***Outline of project***
+
+Project is structured in three Colab notebooks. These are standalone notebooks. 
+
+1-	The project shall start with execution of data generation and clean up notebook. 
+Data generation notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_data.ipynb
+
+This data generates three data files that are used later by notebooks for implementation of SVR and MLP. All file read/write operations in these notebooks are done through Google drive. The code must be changed to avoid access errors. 
+
+2-	The operation of MLP notebook is described in detail in this document. Notebook can be found here:
+MLP Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_MLP.ipynb
+
+3-	As said previously the SVR notebook execution flow is identical to MLP. It is recommended that MLP to be executed first. After gaining familiarity with code execution flow, running SVR notebook would be far easier. SVR notebook can be fund here:
+SVR Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_SVR.ipynb
+<img width="468" height="398" alt="image" src="https://github.com/user-attachments/assets/7ff306cf-5468-42dc-809b-a6db898e3431" />
 
