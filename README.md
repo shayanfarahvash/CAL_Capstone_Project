@@ -55,7 +55,7 @@ Frequency response samples are collected at 129 points. All filters feature pass
 
 
 <p align="center">
-  <img src="/Images/Image3.png" width="600" title="Project Graph">
+  <img src="/Images/Image3.png" width="900" title="Project Graph">
 </p>
 
 <p align="center">Figure 3: Dataframe structure for training</p>
