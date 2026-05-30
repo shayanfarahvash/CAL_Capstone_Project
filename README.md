@@ -1,4 +1,4 @@
-### Design of a 3-stage Ladder LC Bandpass Filter with an Arbitrary Frequency Response 
+### Design of a 3-stage Ladder LC Bandpass Filter with an Arbitrarily-Shaped Frequency Response 
 
 Shayan Farahvash
 
