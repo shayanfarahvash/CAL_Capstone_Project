@@ -76,7 +76,7 @@ A significant challenge in this training phase arises from the fact that the com
 
 
 <p align="center">
-  <img src="/Images/Image5.png" width="600" title="Project Graph">
+  <img src="/Images/Image5.png" width="900" title="Project Graph">
 </p>
 
 <p align="center">Figure 5: Statistics of filter components</p>
