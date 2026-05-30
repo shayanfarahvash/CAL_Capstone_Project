@@ -62,10 +62,10 @@ Frequency response samples are collected at 129 points. All filters feature pass
 <p align="center">Figure 3: Dataframe structure for training</p>
 
 
-Each row in the dataframe presents the filter’s frequency response (X) alongside the corresponding LC component values (y), as illustrated in Figure 3. Sample frequency responses appear in Figure 4, with the base filter highlighted in bold black.
+Each row in the dataframe presents a sample filter’s frequency response (input X) alongside the corresponding LC component values (output y), as illustrated in Figure 3. Sample frequency responses are plotted in Figure 4, with the base filter (that is the  original suboptimal analytical solution)  highlighted in bold black.
 
 
-A significant challenge in this synthesis task arises from the fact that the component values span nine orders of magnitude (refer to Figure 5). Training a neural network on such raw data leads to poor convergence and elevated Mean Absolute Percentage Error (MAPE). To address this, all component values are normalized using log10 scaling, which compresses the value range and allows the optimizer to weigh relative changes uniformly across the pF–µH spectrum.
+A significant challenge in this training phase arises from the fact that the component values span nine orders of magnitude (refer to Figure 5). Training a neural network or SVR on such raw data leads to poor convergence and elevated Mean Absolute Percentage Error (MAPE). To address this, all component values are normalized using log10 scaling, which compresses component  values  and allows the optimizer to weigh relative changes uniformly even though inherently caps values and inductors values could be distributed over 8 orders of magnitude. 
 
 
 <p align="center">
