@@ -53,8 +53,8 @@ Frequency response samples are collected at 129 points. All filters feature pass
 
 <p align="center">Figure 2: Topology of filter used for this project. Three components are added to expand the flexibility of design. the blue-marked components of topology are derived from analytical techniques as the starting point for randomization and simulation.</p>
 
-
-
+  
+  
 
 <p align="center">
   <img src="/Images/Image3.png" width="1100" title="Project Graph">
