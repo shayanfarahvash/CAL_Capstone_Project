@@ -1,4 +1,4 @@
-### Optimal Design of a 3-stage Ladder LC Bandpass Filter with an Arbitrary Frequency Response 
+### Design of a 3-stage Ladder LC Bandpass Filter with an Arbitrary Frequency Response 
 
 Shayan Farahvash
 
@@ -18,7 +18,8 @@ The aim  of this work is start from a dataset of an analytically derived sub-opt
   <img src="/Images/Image1.png" width="600" title="Project Graph">
 </p>
 
-<p align="center">Figure 1: Desired piecewise continuous frequency response of a filter (orange) vs frequency response of a LC filter (blue). Goal is to design a filter that   minimizes the difference between the two.</p><br>
+<p align="center">Figure 1: Desired piecewise continuous frequency response of a filter (orange) vs frequency response of a LC filter (blue). Goal is to design a filter that   minimizes the difference between the two. The red curve shows the traditional frequency response target with stopbands at equal distance from passband of the filter.<img width="468" height="101" alt="image" src="https://github.com/user-attachments/assets/bdef4918-3527-4001-b060-1b74660138b9" />
+  a</p><br> 
 
 
 ***Rationale***
