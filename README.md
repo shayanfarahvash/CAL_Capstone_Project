@@ -19,7 +19,7 @@ The aim  of this work is start from a dataset of an analytically derived sub-opt
   <img src="/Images/Image1.png" width="600" title="Project Graph">
 </p>
 
-<p align="center">Figure 1: Desired piecewise continuous frequency response of a filter along with LC filter response. Goal: minimize the difference between the two</p><br>
+<p align="center">Figure 1: Desired piecewise continuous frequency response of a filter (orange) vs frequency response of a LC filter (blue). Goal is to design a filter that   minimizes the difference between the two.</p><br>
 
 
 ***Rationale***
