@@ -12,8 +12,7 @@ The objective of this Capstone projects is to design a 3-stage ladder LC filter 
 
 2- Multiple stopbands with nonuniform rejection (see below graph for an example). 
 
-The aim  of this work is start from a dataset of an analytically derived sub-optimal solutions, use that to train a ML/AI regressor, and then use regressor to predict what would be the solution to a real world multiple stopband problems.
-
+The aim  of this work is start from a dataset of an analytically derived sub-optimal solutions, use that to train a ML/AI regressor, and then use regressor to predict what would be the solution to a real world multiple stopband problems. The initial analytical solutions are suboptimal because they consider only one stopband edge at a fixed distance from passband edges of a filter.
 
 <p align="center">
   <img src="/Images/Image1.png" width="600" title="Project Graph">
