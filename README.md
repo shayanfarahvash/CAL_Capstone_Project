@@ -6,7 +6,7 @@ Shayan Farahvash
 ***Executive Summary***
 
 
-The objective of this Capstone projects is to design a 3-stage ladder LC filter to deliver a desired frequency response subject to the following conditions 
+The objective of this Capstone projects is to design a 3-stage ladder LC filter (Figure 2) to deliver a desired frequency response subject to the following conditions 
 
 1- One passband only. For this project we set it to be between 2300MHz to 2400MHz but it can be any arbitrary span in frequency domain.
 
