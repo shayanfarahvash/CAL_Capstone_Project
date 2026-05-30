@@ -53,8 +53,7 @@ Circuit analysis techniques are required to verify which designs exhibit accepta
 <p align="center">Figure 2: Topology of filter used for this project. Three components are added to expand the flexibility of design. the blue-marked components of topology are derived from analytical techniques as the starting point for randomization and simulation.</p>
 
   
-Frequency response samples are collected at 129 points. All filters feature passbands from 2300 MHz to 2400 MHz while frequency responses are captured over the range of 1800 MHz to 2800 MHz. Randomization of the five base filters produced 6,000 samples for training; only those with passband response with less than 3 dB attenuation were retained, and all samples were excluded. Inductance values are expressed in microhenries (µH), and capacitance values in picofarads (pF). Ultimately, two dataframes are created: one containing the raw data and another with outliers removed.
-
+Frequency response samples are collected at 129 points. All filters feature passbands from 2300 MHz to 2400 MHz while frequency responses are captured over the range of 1800 MHz to 2800 MHz. Randomization of the five base filters produced 6,000 samples for training; only those with passband response with less than 3 dB attenuation were retained, and all samples were excluded. Inductance values are expressed in microhenries (µH), and capacitance values in picofarads (pF). 
 
 <p align="center">
   <img src="/Images/Image3.png" width="1100" title="Project Graph">
