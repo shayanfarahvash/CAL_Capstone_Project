@@ -92,15 +92,15 @@ To assess data quality, box plots of filter components were presented in Figure 
 <p align="center">Figure 6: Boxplot of values for  filter components</p>
 
 
-By analyzing the histogram of filter components (Fig. 7), additional insights can be obtained.
+By analyzing the histogram of filter components (Figure 7), additional data insights can be obtained. Namely,
 
-•	Since L_0, L_1, L_2, and Cs_1 originated from the primary optimal design, their values remain unchanged as they are not necessary for achieving new frequency responses.
+•	Since L_0, L_1, L_2, and Cs_1 originated from the primary suboptimal design, their values remain mostly unchanged as large deviation would result in excessive passband ripples.
 
 •	Cp_0 and Cp_2 are randomized; however, their limited range suggests proximity to their optimal values.
 
-•	The process of randomization to produce a notch in the response, while maintaining low in-band insertion loss, led to considerable variation in CP_1, CS_0, and CS_2. These modifications are essential for tailoring the filter's frequency response and creating a pronounced notch at the upper edge of the passband.
+•	The process of randomization to produce a notch (deep attenuation)  in the response, while maintaining low in-band insertion loss, led to considerable variation in CP_1, CS_0, and CS_2. These modifications are essential for tailoring the filter's frequency response and creating a pronounced notch at the upper edge of the passband.
 
-•	Although the filter’s frequency response was uniformly randomized, the distribution of component values does not reflect uniform or Gaussian characteristics, highlighting a nonlinear relationship between the response and the component values.
+•	Distribution of component values are neither uniform nor Gaussian, highlighting a nonlinear relationship between frequency response and the component values. This is the first insight that purely linear regression methods are not effective for this application. 
 
 
 
