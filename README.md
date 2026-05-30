@@ -15,7 +15,7 @@ The objective of this Capstone projects is to design a 3-stage ladder LC filter 
 The aim  of this work is start from a dataset of an analytically derived sub-optimal solutions, use that to train a ML/AI regressor, and then use regressor to predict what would be the solution to a real world multiple stopband problems. The initial analytical solutions are suboptimal because they consider only one stopband edge at a fixed distance from passband edges of a filter.
 <p align="center">
  <img src="/Images/Image1.png" width="600" title="Project Graph">
-</p>p>
+</p>
 
 <p align="center">Figure 1: Desired piecewise continuous frequency response of a filter (orange) vs frequency response of a LC filter (blue). Goal is to design a filter that   minimizes the difference between the two. The red curve shows the traditional frequency response target with stopbands at equal distance from passband of the filter. </p><br> 
 
