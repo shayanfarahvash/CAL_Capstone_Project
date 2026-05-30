@@ -33,7 +33,7 @@ Given that there is no analytical solution for the problem stated above, the cur
 ***Research Question***
 
 
-The objective of this project is to determine the optimal component values for a three-stage LC ladder filter to accurately approximate a target frequency response. While target specifications are often piecewise continuous, a physical LC filter is inherently constrained to a continuous response. To expand the design space, the filter topology has been augmented with additional components, enabling an AI/ML regression model to explore higher-dimensional configurations for response realization (see Figure 2).
+The objective of this project is to determine the optimal component values ( a total of 9 as shown in Figure 2)  for a three-stage LC ladder filter to accurately approximate a target frequency response. While target specifications are often piecewise continuous, a physical LC filter is inherently constrained to a continuous response. To expand the design space, the filter topology has been augmented with additional components, enabling an AI/ML regression model to explore higher-dimensional configurations for response realization (see Figure 2).
 Currently, no closed-form analytical solution exists that accounts for these additional components. The AI/ML regressor determines the values of the nine constituent components (comprising 3 inductors and 6 capacitors) to minimize the error between the desired specification and the realizable response of the hardware architecture illustrated in Figure 2.
 
 
