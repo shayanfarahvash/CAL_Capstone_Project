@@ -253,7 +253,7 @@ Although MSE is useful for optimization, it lacks clear real-world meaning. To a
   <img src="/Images/Image13.png" width="600" title="Project Graph">
 </p>
 
-<p align="center">Figure 13: MLP accuracy on predicting components values of filter</p>
+<p align="center">Figure 16: MLP accuracy on predicting components values of filter</p>
 
 
 The MLP demonstrated strong performance when tested on a new piecewise continuous profile. Its initial Response MSE was 260.75, and after applying Nelder-Mead optimization to adjust the circuit, the MSE improved only slightly to 254.91. This minimal difference shows that the MLP’s first prediction was already close to optimal. The component values had just an 8.54% MAPE compared to those from full optimization, indicating that the model isn't simply memorizing its training data—it has genuinely absorbed the underlying physics and intricate mapping needed for filter synthesis. When confronted with a completely new, piecewise-continuous response, the MLP provides a nearly optimal solution in mere seconds.
@@ -263,7 +263,7 @@ The MLP demonstrated strong performance when tested on a new piecewise continuou
   <img src="/Images/Image14.png" width="600" title="Project Graph">
 </p>
 
-<p align="center">Figure 14: Comparison between MLP prediction (sample #159) and the corresponding optimal solutions</p>
+<p align="center">Figure 17: Comparison between MLP prediction (sample #159) and the corresponding optimal solutions</p>
 
 
 Filter design is inherently difficult for traditional linear models because the relationship between components (L ,C ) and frequency response is highly non-linear. MLP and SVR ( Support Vector Regression) are the right tools for this task because they excel at capturing these complex, high-dimensional mappings without requiring explicit physical equations for every iteration.
@@ -277,7 +277,7 @@ Even on individual test cases like Sample #159, the parity remains clear. The ML
   <img src="/Images/Image15.png" width="600" title="Project Graph">
 </p>
 
-<p align="center">Figure 15: CComparison table between MLP and SVR</p>
+<p align="center">Figure 18: CComparison table between MLP and SVR</p>
 
 ### Next steps
 
