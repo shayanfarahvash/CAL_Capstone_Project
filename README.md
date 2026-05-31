@@ -184,6 +184,15 @@ The RBF (Radial Basis Function) kernel is a popular Gaussian-like choice for mod
 
 Hyperparameter search was also conducted using the Optuna library; further details are available in the Filter_SVR Jupyter notebook.
 
+***PPO***
+
+$$EV = 1 - \frac{\text{Var}(R_t - V(s_t))}{\text{Var}(R_t)}$$
+
+•  $\text{Var}(R_t)$ is the natural variance of the actual rewards coming from the environment.
+•  $\text{Var}(R_t - V(s_t))$ is the variance of the Critic's errors (the residuals).
+This metric has an upper limit of 1 with no defined lower bound. Values above 0.5 indicate that the critic neural network is effectively capturing the fundamental dynamics of the reward landscape, allowing it to distinguish which states are generally advantageous or disadvantageous. In the filter design scenario, the explained variance (EV) consistently remained above 0, often approaching 0.8, though occasional significant decreases were observed. These declines are not inherently concerning and may reflect the complexity of the filter design environment, where the actor may sometimes take actions that are temporarily misaligned with the critic's assessment; such discrepancies typically resolve over time. Enhancing the performance of the critic network falls outside the scope of this project, but generally involves increasing both batch size and n_step, which necessitates larger sample sizes and substantially longer training durations.
+
+
 
 ### Results
 
