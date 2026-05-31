@@ -69,7 +69,7 @@ A significant challenge in this training phase arises from the fact that the com
 
 
 <p align="center">
-  <img src="/Images/Image4.png" width="600" title="Project Graph">
+  <img src="/Images/Image4.png" width="800" title="Project Graph">
 </p>
 
 <p align="center">Figure 4: Samples of frequency response of filter in the training set</p>
