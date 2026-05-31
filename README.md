@@ -241,7 +241,7 @@ This metric has an upper limit of 1 with no defined lower bound. Values above 0.
   <img src="/Images/Image16.png" width="1100" title="Project Graph">
 </p>
 
-<p align="center">Figure 15: Training behavior of PPO as seen by entropy loss (Actor network)  and EV (Critic network)  </p>
+<p align="center">Figure 15: Training behavior of PPO as measured by entropy loss (Actor network)  and EV (Critic network)  </p>
 
 ### Results
 
