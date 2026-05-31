@@ -131,7 +131,7 @@ First an MLP is employed to map the filter's frequency response to its respectiv
 
 
 <p align="center">
-  <img src="/Images/Image9.png" width="600" title="Project Graph">
+  <img src="/Images/Image9.png" width="900" title="Project Graph">
 </p>
 
 <p align="center">Figure 9: MLP</p>
@@ -147,7 +147,7 @@ The training cell operated efficiently, completing 100 epochs within approximate
 
 
 <p align="center">
-  <img src="/Images/Image10.png" width="600" title="Project Graph">
+  <img src="/Images/Image10.png" width="900" title="Project Graph">
 </p>
 
 <p align="center">Figure 10: Training of MLP</p>
