@@ -160,14 +160,14 @@ The optimization history graph illustrates how the model’s error decreases ove
 
 
 <p align="center">
-  <img src="/Images/Image11.png" width="600" title="Project Graph">
+  <img src="/Images/Image11.png" width="1100" title="Project Graph">
 </p>
 
 <p align="center">Figure 11: Importance of hyperparameters in reducing  MSE</p>
 
 
 <p align="center">
-  <img src="/Images/Image12.png" width="600" title="Project Graph">
+  <img src="/Images/Image12.png" width="1100" title="Project Graph">
 </p>
 
 <p align="center">Figure 12: History of search for hyperparameter tuning</p>
