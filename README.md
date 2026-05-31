@@ -126,6 +126,7 @@ To determine the distribution of filter response data, four key points were sele
 
 Both supervised learning (SL) and reinforcement learning (RL) methods were employed to determine the component values necessary for filter design. Given the highly nonlinear relationship between component values and a filter's frequency response, Multi-Layer Perceptron (MLP) and Support Vector Regression (SVR) were utilized for supervised learning. Throughout the duration of this project, our focus remains solely on the magnitude response of the filter, with phase response intentionally omitted from consideration.
 
+### MLP
 
 First an MLP is employed to map the filter's frequency response to its respective components. This decision is primarily based on the observation that existing literature regarding machine learning and artificial intelligence in circuit design tends to favor reinforcement learning (RL) for identifying the optimal circuit configuration. In this study, RL is applied following an initial estimate obtained through regression (supervised learning). One advantage of utilizing an MLP lies in its structure as a neural network, which allows it to be incorporated into the RL framework as the initial value of the actor network.
 
