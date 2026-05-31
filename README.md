@@ -47,7 +47,7 @@ Circuit analysis techniques are required to verify which designs exhibit accepta
 
 
 <p align="center">
-  <img src="/Images/Image2.png" width="600" title="Project Graph">
+  <img src="/Images/Image2.png" width="800" title="Project Graph">
 </p>
 
 <p align="center">Figure 2: Topology of filter used for this project. Three components are added to expand the flexibility of design. the blue-marked components of topology are derived from analytical techniques as the starting point for randomization and simulation.</p>
