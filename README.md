@@ -201,8 +201,15 @@ The actor-critic architecture in PPO operates as a dual-component system where d
 
 The Stable-Baseline3 library was used to implement the PPO model. Users are required to create a class with three methods that define the model's environment: an `init` method for initialization, along with `step` and `reset` methods to specify interaction protocols. The environment represents a multidimensional space where PPO explores in search of the optimal reward. The `step` and `reset` methods determine the calculation of rewards and define the observations available to the PPO model during exploration.
 For PPO training, the reward function is negative of MAE error difference between the designed filter response and the input desired frequency response. Since PPO goal is to maximize the reward function, that  would result in minimization of MAE. MAE was chosen insated of MSE as it resulted in better filter designs.
+
 A PPO model is fairly complex and involves numerous hyperparameters. In this project, the Optuna library was once again used to optimize their values. However, even with a modest sample size of 1,000, training a PPO model on a CPU typically takes nearly an hour. To speed up the search process, the maximum number of training samples was significantly reduced, by about tenfold. The neural network architecture had little effect on the reward function, so two separate neural networks with a depth of four and only 64 weights each were chosen. Optuna identified the most crucial hyperparameters, which turned out to be learning rate, clip range, and gae_lambda.
 
+
+<p align="center">
+  <img src="/Images/Image17.png" width="1100" title="Project Graph">
+</p>
+
+<p align="center">Figure 14: Importance of hyperparameters for PPO </p>
 
 The learning rate (set at 0.0005 in this project) determines the step size used by the optimizer—Adam in this case—when adjusting the weights of both the Actor and Critic neural networks according to the computed loss. An excessively high learning rate can result in abrupt network updates that overshoot optimal weight values, causing instability during training, unpredictable policy outcomes, and potential "catastrophic forgetting," wherein the agent loses previously acquired effective strategies. Conversely, a learning rate that is too low leads to slow acquisition of knowledge, necessitating significant data and computational resources to achieve progress, and increases the risk of the networks becoming trapped in suboptimal local minima.
 
@@ -230,7 +237,11 @@ $$EV = 1 - \frac{\text{Var}(R_t - V(s_t))}{\text{Var}(R_t)}$$
 
 This metric has an upper limit of 1 with no defined lower bound. Values above 0.5 indicate that the critic neural network is effectively capturing the fundamental dynamics of the reward landscape, allowing it to distinguish which states are generally advantageous or disadvantageous. In the filter design scenario, the explained variance (EV) consistently remained above 0, often approaching 0.8, though occasional significant decreases were observed. These declines are not inherently concerning and may reflect the complexity of the filter design environment, where the actor may sometimes take actions that are temporarily misaligned with the critic's assessment; such discrepancies typically resolve over time. Enhancing the performance of the critic network falls outside the scope of this project, but generally involves increasing both batch size and n_step, which necessitates larger sample sizes and substantially longer training durations.
 
+<p align="center">
+  <img src="/Images/Image16.png" width="1100" title="Project Graph">
+</p>
 
+<p align="center">Figure 15: Training behavior of PPO as seen by entropy loss (Actor network)  and EV (Critic network)  </p>
 
 ### Results
 
