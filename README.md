@@ -86,7 +86,7 @@ To assess data quality, box plots of filter components were presented in Figure 
 
 
 <p align="center">
-  <img src="/Images/Image6.png" width="600" title="Project Graph">
+  <img src="/Images/Image6.png" width="1000" title="Project Graph">
 </p>
 
 <p align="center">Figure 6: Boxplot of values for  filter components</p>
