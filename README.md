@@ -174,6 +174,17 @@ The optimization history graph illustrates how the model’s error decreases ove
 <p align="center">Figure 12: History of search for hyperparameter tuning</p>
 
 
+***SVR***
+
+The same data used to train the MLP was also employed for training the SVR.
+
+During SVR training, Cp_1 emerged as a filter component with a distribution distinct from other components. To address this, a flexible RBF kernel SVR with specific hyperparameters was applied specifically for Cp_1 regression. In contrast, the other components were trained using a pipeline that incorporated Nystroem kernel approximation followed by LinearSVR. This method was chosen for its efficiency with most components, while Cp_1 required a targeted RBF SVR approach to achieve greater accuracy, suggesting Cp_1 has a more complex relationship with the input frequency response data.
+
+The RBF (Radial Basis Function) kernel is a popular Gaussian-like choice for modeling nonlinear regression within the SVM/SVR framework. Although effective for capturing nonlinear relationships, it incurs a high computational load, scaling as O(N^2) or even O(N^3). Meanwhile, the Nystroem kernel operates by sub-sampling the training data. Instead of computing the full kernel matrix, it estimates a lower-rank approximation using these samples, transforming original features into a new finite-dimensional feature space. This allows linear models, such as LinearSVR, to function in that approximated space, significantly reducing computational cost and memory requirements for large datasets by converting the problem to a linear one in the new feature space.
+
+Hyperparameter search was also conducted using the Optuna library; further details are available in the Filter_SVR Jupyter notebook.
+
+
 ### Results
 
 
