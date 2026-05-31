@@ -118,7 +118,7 @@ By analyzing the histogram of filter components (Figure 7), additional data insi
 <p align="center">Figure 8: Histogram of filter responses at four frequencies</p>
 
 
-To determine the distribution of filter response data, four key points were selected for analysis: 1800 MHz, 2300 MHz, ~2400 MHz, and 2800 MHz. The response distributions are well-formed without any real outlier, as expected since we removed all outliers  previously (see Fig. 8). Predictably, filter loss at the passband edges (2300 MHz and 2400 MHz) is minimal. However, loss at the upper passband edge is noticeably higher  than the one at lower edge. This is a direct result of deep notches in frequency response of filter near the upper passband edge.
+To determine the distribution of filter response data, four key points were selected for analysis: 1800 MHz, 2300 MHz, ~2400 MHz, and 2800 MHz. The response distributions are well-formed without any real outlier, as expected since we removed all outliers  previously (see Fig. 8). Predictably, filter loss at the passband edges (2300 MHz and 2400 MHz) is minimal. However, loss at the upper passband edge (2400 MHz) is noticeably higher  than the one at lower edge (2300 MHz). This is a direct result of deep notches in frequency response of filter near the upper passband edge.
 
 
 ***Methodology***
