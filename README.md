@@ -118,7 +118,7 @@ By analyzing the histogram of filter components (Figure 7), additional data insi
 <p align="center">Figure 8: Histogram of filter responses at four frequencies</p>
 
 
-To determine the distribution of filter response data, five key points were selected for analysis: 1800 MHz, 2300 MHz, 2400 MHz, and 2800 MHz. The response distributions are consistent and well-formed (see Fig. 8).
+To determine the distribution of filter response data, four key points were selected for analysis: 1800 MHz, 2300 MHz, 2401 MHz, and 2800 MHz. The response distributions are well-formed without any real outlier as expected since we removed all outliers  (see Fig. 8).
 
 •	The notch frequency should not be positioned too close to the upper band edge at 2400 MHz; the bar diagram indicates that the minimum value is 2450 MHz.
 
