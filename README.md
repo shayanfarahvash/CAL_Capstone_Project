@@ -251,7 +251,7 @@ Although MSE is useful as an error metric for training a model, it lacks clear r
 
 
 <p align="center">
-  <img src="/Images/Image13.png" width="400" title="Project Graph">
+  <img src="/Images/Image13.png" width="500" title="Project Graph">
 </p>
 
 <p align="center">Figure 16: MLP accuracy on predicting components values of filter</p>
