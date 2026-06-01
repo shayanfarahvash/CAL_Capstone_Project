@@ -290,7 +290,7 @@ As described in the preceding section, the objective of reinforcement learning i
 
 
 <p align="center">
-  <img src="/Images/Image20.png" width="900" title="Project Graph">
+  <img src="/Images/Image20.png" width="800" title="Project Graph">
 </p>
 
 <p align="center">Figure 19: Comparison table between MLP and PPO</p>
