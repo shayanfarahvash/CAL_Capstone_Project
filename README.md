@@ -277,10 +277,10 @@ Even on individual test cases like sample #159, the parity remains clear. The ML
 
 
 <p align="center">
-  <img src="/Images/Image15.png" width="600" title="Project Graph">
+  <img src="/Images/Image15.png" width="800" title="Project Graph">
 </p>
 
-<p align="center">Figure 18: CComparison table between MLP and SVR</p>
+<p align="center">Figure 18: Comparison table between MLP and SVR</p>
 
 ### Next steps
 
