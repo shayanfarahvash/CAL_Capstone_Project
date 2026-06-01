@@ -312,17 +312,29 @@ The logical next step is to extend these methods to higher-order ladder filters.
 
 ### Outline of project
 
-Project is structured in three Colab notebooks. These are standalone notebooks. 
+Project is structured in four Colab notebooks. These are standalone notebooks. 
 
 1-	The project shall start with execution of data generation and clean up notebook. 
-Data generation notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_data.ipynb
+Data generation notebook: 
 
-This data generates three data files that are used later by notebooks for implementation of SVR and MLP. All file read/write operations in these notebooks are done through Google drive. The code must be changed to avoid access errors. 
+https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_data.ipynb
+
+This notebook  generates three data files that are used later by notebooks for implementation of SVR, MLP and PPO. All file read/write operations in these notebooks are done through Google drive. The code must be changed to avoid access errors. 
 
 2-	The operation of MLP notebook is described in detail in this document. Notebook can be found here:
-MLP Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_MLP.ipynb
+MLP Notebook: 
+
+https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_MLP.ipynb
 
 3-	As said previously the SVR notebook execution flow is identical to MLP. It is recommended that MLP to be executed first. After gaining familiarity with code execution flow, running SVR notebook would be far easier. SVR notebook can be fund here:
-SVR Notebook: https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_SVR.ipynb
+SVR Notebook: 
+
+https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_SVR.ipynb
+
+4-	The PPO notebook is standalone but need to upload the MLP model; therefore,  the Filter_MLP notebook must be executed first. Notebook can be found here:
+
+https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_MLP.ipynb
+
+
 
 
