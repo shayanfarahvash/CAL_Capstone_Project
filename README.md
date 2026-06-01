@@ -267,11 +267,14 @@ The MLP demonstrated strong generalization performance when tested on a new set 
 
 
 Filter design is inherently difficult for traditional linear models because the relationship between components (L ,C ) and frequency response is highly non-linear. MLP and SVR ( Support Vector Regression) are the right tools for this task because they excel at capturing these complex, high-dimensional mappings without requiring explicit physical equations for every iteration.
-The details of deployed SVR model is not discussed here but workflow is identical to MLP. The notebook supplied to support the comparison table shown below.
 
-The data confirms that both models are roughly equal in performance, offering nearly interchangeable results. While SVR shows a slight edge in training MAPE (7.69% vs. 8.57%), the MLP actually delivers a better initial frequency response out of the box, with an average MSE of 597.83 compared to SVR’s 620.06. Once these predictions are put through a targeted optimization routine, both settle to very close average MSE of 532 and 523.
+The details of deployed SVR model is not discussed here but workflow is identical to MLP. The notebook is supplied (Filter_SVR) to support the comparison table shown below.
 
-Even on individual test cases like Sample #159, the parity remains clear. The MLP achieved a tighter component match (8.54% MAPE vs. 9.27% for SVR), while SVR reached a marginally lower optimized error (244.53 vs. 254.91). This statistical neck-and-neck performance proves that both architectures have successfully mastered the underlying design physics, allowing you to choose the model that best fits your specific computational workflow without sacrificing accuracy.
+The data confirms that both supervised models are roughly equal in performance, offering nearly interchangeable results. While SVR shows a slight edge in training MAPE (7.69% vs. 8.57%), the MLP actually delivers a better initial frequency response out of the box, with an average MSE of 597.83 compared to SVR’s 620.06. Once these predictions are put through a targeted optimization routine, both settle to very close average MSE of 532 and 523.
+
+Even on individual test cases like sample #159, the parity remains clear. The MLP achieved a tighter component match (8.54% MAPE vs. 9.27% for SVR), while SVR reached a marginally lower optimized error (244.53 vs. 254.91). This statistical neck-and-neck performance proves that both architectures have successfully mastered the underlying design physics, allowing a designer  to choose the model that best fits a specific computational workflow without sacrificing accuracy.
+
+
 
 <p align="center">
   <img src="/Images/Image15.png" width="600" title="Project Graph">
