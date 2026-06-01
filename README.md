@@ -305,19 +305,9 @@ The table in figure 19 shows that PPO not only successfully trained to reduce th
 
 ### Next steps
 
-In deep learning workflows, supervised learning (SL) is often the first line of defense for regression problems, providing a "hot start" by mapping inputs to preliminary solutions. In the context of LC filter synthesis, architectures like MLP and SVM are used for this project. 
+This work clearly shows that applying reinforcement learning (RL) to the initial results of supervised learning can make the RL model more sample-efficient, reducing the often considerable time and cost required to train such models. Even in the most well-known case of RL, AlphaGo was first trained using game records from skilled players to enhance its abilities.
 
-However, while these models successfully learn the underlying physics and provide solutions with low MAPE (around 8.5%), the search space for high-frequency electronics is exceptionally sensitive. Because the relationship between a component's physical value and its frequency response highly non-linear, even a 1% deviation in an inductor or capacitor value can cause a filter to drift out of specification. In these high-precision domains, a supervised "one-shot" prediction often acts as an educated guess—valuable, but inadequate for a realizable final product.
-
-To bridge this gap, Reinforcement Learning (RL)—specifically algorithms like Proximal Policy Optimization (PPO) via Stable Baselines3—has emerged as a powerful tool for navigating these massive solution spaces. Much like RL agents learn to master the branching paths of Go or the complex controls of autonomous vehicles, they can be trained to "play" the design space of an electrical network.
-By combining these paradigms, we could establish a two-stage optimization pipeline:
-
-•	The Supervised Estimate: The MLP/SVR provides a near-optimal starting point in a fraction of a second, drastically reducing the computational overhead that an iterative search would normally face from a "cold start."
-
-•	The RL Refinement: The RL agent (or a targeted routine like Nelder-Mead) then takes this estimate and performs a granular search of the immediate local space. It fine-tunes the component values to minimize the response MSE, turning a "degraded" prediction into a continuous, realizable frequency response.
-
-This synergy allows for a design tool that is both fast and precise, replacing manual, ad-hoc tuning with an automated system that understands the deep, non-linear mapping of RF components.
-
+The logical next step is to extend these methods to higher-order ladder filters. This task is relatively simple and mainly involves scaling up the models while following the procedures outlined in this report. A much greater challenge lies in exploring alternative architectures beyond the basic ladder structure. It is well established that nontraditional configurations, such as twin-T and other parallel networks, can outperform conventional designs. Electrical network exploration is a new frontier for deep learning, and RL algorithms are particularly adept at tackling this domain. Similar to how an RL agent learns the branching strategies of Go or navigates the complexities of autonomous vehicle control, these algorithms can be trained to "explore" electrical network design spaces and discover architectures that optimize performance metrics.
 
 
 ### Outline of project
