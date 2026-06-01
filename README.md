@@ -250,17 +250,17 @@ Although MSE is useful as an error metric for training a model, it lacks clear r
 
 
 <p align="center">
-  <img src="/Images/Image13.png" width="600" title="Project Graph">
+  <img src="/Images/Image13.png" width="400" title="Project Graph">
 </p>
 
 <p align="center">Figure 16: MLP accuracy on predicting components values of filter</p>
 
 
-The MLP demonstrated strong performance when tested on a new piecewise continuous profile. Its initial Response MSE was 260.75, and after applying Nelder-Mead optimization to adjust the circuit, the MSE improved only slightly to 254.91. This minimal difference shows that the MLP’s first prediction was already close to optimal. The component values had just an 8.54% MAPE compared to those from full optimization, indicating that the model isn't simply memorizing its training data—it has genuinely absorbed the underlying physics and intricate mapping needed for filter synthesis. When confronted with a completely new, piecewise-continuous response, the MLP provides a nearly optimal solution in mere seconds.
+The MLP demonstrated strong generalization performance when tested on a new set of  piecewise continuous frequency response  profiles. Its initial Response MSE was 260.75, and after applying Nelder-Mead optimization to adjust the circuit, the MSE improved only slightly to 254.91. This minimal difference shows that the MLP’s first prediction was already close to optimal. The component values had just an 8.54% MAPE compared to those from full optimization, indicating that the model isn't simply memorizing its training data and it has genuinely absorbed the underlying physics and intricate mapping needed for filter synthesis. When confronted with a completely new, piecewise-continuous response, the MLP provides a nearly optimal solution in mere seconds.
 
 
 <p align="center">
-  <img src="/Images/Image14.png" width="400" title="Project Graph">
+  <img src="/Images/Image14.png" width="900" title="Project Graph">
 </p>
 
 <p align="center">Figure 17: Comparison between MLP prediction (sample #159) and the corresponding optimal solutions</p>
