@@ -309,6 +309,14 @@ This work clearly shows that applying reinforcement learning (RL) to the initial
 
 The logical next step is to extend these methods to higher-order ladder filters. This task is relatively simple and mainly involves scaling up the models while following the procedures outlined in this report. A much greater challenge lies in exploring alternative architectures beyond the basic ladder structure. It is well established that nontraditional configurations, such as twin-T and other parallel networks, can outperform conventional designs. Electrical network exploration is a new frontier for deep learning, and RL algorithms are particularly adept at tackling this domain. Similar to how an RL agent learns the branching strategies of Go or navigates the complexities of autonomous vehicle control, these algorithms can be trained to "explore" electrical network design spaces and discover architectures that optimize performance metrics.
 
+Further reading:
+
+https://arxiv.org/html/2501.11839v1
+
+https://arxiv.org/abs/2402.14236
+
+
+
 
 ### Outline of project
 
