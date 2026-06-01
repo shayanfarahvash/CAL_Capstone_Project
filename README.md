@@ -246,7 +246,7 @@ This metric has an upper limit of 1 with no defined lower bound. Values above 0.
 ### Results
 
 
-Although MSE is useful for optimization, it lacks clear real-world meaning. To address this, the evaluation cell converts the scaled predictions back into physical units (micro-Henries and pico-Farads) and computes the Mean Absolute Percentage Error (MAPE). The average MAPE is 8.57% on training data and 8.93% on unseen test data, demonstrating a narrow margin and strong generalization. The breakdown table offers vital engineering insight: the model predicts inductors (L_0, L_1, L_2) and particular capacitors (such as Cs_1 and the Cp group) with impressive accuracy, often achieving errors below 1%. In contrast, it faces greater challenges with capacitors Cs_0 and Cs_2, which see around 33% error. This suggests that the frequency response is either highly sensitive or highly degenerate regarding these capacitor values, making them intrinsically more difficult to predict based solely on magnitude response.
+Although MSE is useful as an error metric for training a model, it lacks clear real-world meaning. To address this, the evaluation cell converts the scaled predictions back into physical units (micro-Henries and pico-Farads) and computes the Mean Absolute Percentage Error (MAPE) for both training and test sets. For MLP, the average MAPE is 8.57% on training data and 8.93% on unseen test data, demonstrating a narrow margin and strong generalization. The breakdown table offers vital engineering insight: the model predicts inductors (L_0, L_1, L_2) and particular capacitors (such as Cs_1, Cp_0, Cp_1 and Cp_2) with impressive accuracy, often achieving errors below 1%. In contrast, it faces greater challenges with capacitors Cs_0 and Cs_2, which see around 33% error. This suggests that the frequency response is either highly sensitive or highly degenerate regarding these capacitor values, making them intrinsically more difficult to predict based solely on magnitude response.
 
 
 <p align="center">
@@ -260,7 +260,7 @@ The MLP demonstrated strong performance when tested on a new piecewise continuou
 
 
 <p align="center">
-  <img src="/Images/Image14.png" width="600" title="Project Graph">
+  <img src="/Images/Image14.png" width="400" title="Project Graph">
 </p>
 
 <p align="center">Figure 17: Comparison between MLP prediction (sample #159) and the corresponding optimal solutions</p>
