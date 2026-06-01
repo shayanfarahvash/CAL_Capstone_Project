@@ -245,6 +245,7 @@ This metric has an upper limit of 1 with no defined lower bound. Values above 0.
 
 ### Results
 
+***Supervised Learning*** 
 
 Although MSE is useful as an error metric for training a model, it lacks clear real-world meaning. To address this, the evaluation cell converts the scaled predictions back into physical units (micro-Henries and pico-Farads) and computes the Mean Absolute Percentage Error (MAPE) for both training and test sets. For MLP, the average MAPE is 8.57% on training data and 8.93% on unseen test data, demonstrating a narrow margin and strong generalization. The breakdown table offers vital engineering insight: the model predicts inductors (L_0, L_1, L_2) and particular capacitors (such as Cs_1, Cp_0, Cp_1 and Cp_2) with impressive accuracy, often achieving errors below 1%. In contrast, it faces greater challenges with capacitors Cs_0 and Cs_2, which see around 33% error. This suggests that the frequency response is either highly sensitive or highly degenerate regarding these capacitor values, making them intrinsically more difficult to predict based solely on magnitude response.
 
@@ -281,6 +282,11 @@ Even on individual test cases like sample #159, the parity remains clear. The ML
 </p>
 
 <p align="center">Figure 18: Comparison table between MLP and SVR</p>
+
+
+***Reinforcement Learning*** 
+
+As described in the preceding section, the objective of reinforcement learning is to enhance the solution obtained from supervised learning. Accordingly, Mean Absolute Percentage Error (MAPE) is computed for the frequency response of filters designed using both MLP and PPO. The original piecewise continuous response, utilized by the MLP model to determine filter component values, serves as the reference for MAPE calculation. Th initial component values, together with the input piecewise continuous target frequency response, were subsequently used to train the PPO algorithm. Consistent with supervised learning practices, the dataset comprising desired input responses and initial MLP designs was partitioned into training and testing sets, and MAPE was calculated for each subset.
 
 ### Next steps
 
