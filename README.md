@@ -295,6 +295,8 @@ As described in the preceding section, the objective of reinforcement learning i
 
 <p align="center">Figure 19: Comparison table between MLP and PPO</p>
 
+The table in figure 19 shows that PPO not only successfully trained to reduce the error for the training data but also it is equally capable to generalize what is learned well to cases that it has not seen and reduce their errors equally well. This can be exemplified by comparing side-by-side the frequency response of a sample of training or test sets. Figure 20 shows that PPO  has dramatically improved the passband loss by trading off out-of-passband rejection, and in doing so, it has dramatically improved the initial error of %54.6 to %37.2. 
+
 ### Next steps
 
 In deep learning workflows, supervised learning (SL) is often the first line of defense for regression problems, providing a "hot start" by mapping inputs to preliminary solutions. In the context of LC filter synthesis, architectures like MLP and SVM are used for this project. 
