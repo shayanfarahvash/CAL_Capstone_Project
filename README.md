@@ -343,6 +343,6 @@ https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bd
 
 https://github.com/shayanfarahvash/CAL_Capstone_Project/blob/dd40ec38293e1b441bdf9251332f4030ca58ef34/Filter_MLP.ipynb
 
-
+As opposed to other Colab notebooks in this depo, all cell outputs are cleared  to keep the size of this notebook small. Executed cells will regenerate all outputs including a detailed Tensorboard display panel to monitor the training of the PPO model.
 
 
