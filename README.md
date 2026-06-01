@@ -288,6 +288,13 @@ Even on individual test cases like sample #159, the parity remains clear. The ML
 
 As described in the preceding section, the objective of reinforcement learning is to enhance the solution obtained from supervised learning. Accordingly, Mean Absolute Percentage Error (MAPE) is computed for the frequency response of filters designed using both MLP and PPO. The original piecewise continuous response, utilized by the MLP model to determine filter component values, serves as the reference for MAPE calculation. Th initial component values, together with the input piecewise continuous target frequency response, were subsequently used to train the PPO algorithm. Consistent with supervised learning practices, the dataset comprising desired input responses and initial MLP designs was partitioned into training and testing sets, and MAPE was calculated for each subset.
 
+
+<p align="center">
+  <img src="/Images/Image20.png" width="900" title="Project Graph">
+</p>
+
+<p align="center">Figure 19: Comparison table between MLP and PPO</p>
+
 ### Next steps
 
 In deep learning workflows, supervised learning (SL) is often the first line of defense for regression problems, providing a "hot start" by mapping inputs to preliminary solutions. In the context of LC filter synthesis, architectures like MLP and SVM are used for this project. 
